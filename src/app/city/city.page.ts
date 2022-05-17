@@ -20,6 +20,7 @@ export class CityPage implements OnInit {
       { city: 'Nairobi', condition: 'Sunny', temp: '28' },
       { city: 'Mombasa', condition: 'Sunny', temp: '28' },
       { city: 'Kiambu', condition: 'Rainy', temp: '13' },
+      { city: 'Kakamega', condition: 'Thunderstorm', temp: '11' },
     ]
   }
   getForecast(town) {
