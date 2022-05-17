@@ -5,9 +5,9 @@
 export const environment = {
   production: false,
   weatherAPI: 'https://api.openweathermap.org/data/2.5',
-  weatherKey: 'ba9f0cb608fecef2408a5fd31402c799',
-  keystorePassword: 'myPassword',
-  alias: 'Weather'
+  weatherKey: '',
+  keystorePassword: '',
+  alias: ''
 };
 
 /*
