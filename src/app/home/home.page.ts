@@ -31,19 +31,6 @@ export class HomePage implements OnInit {
         console.log(ev.detail.value)
       }
     }
-    // if (ev.detail.value === 'home') {
-    //   this.home = true;
-    //   this.gym = false;
-    //   this.crossfit = false;
-    // } else if (ev.detail.value === 'gym') {
-    //   this.home = false;
-    //   this.gym = true;
-    //   this.crossfit = false;
-    // } else if (ev.detail.value === 'crossfit') {
-    //   this.home = false;
-    //   this.gym = false;
-    //   this.crossfit = true;
-    // }
   }
   getCurrentCity() {
     const lat = '33.44';
