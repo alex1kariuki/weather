@@ -7,14 +7,14 @@
 <ion-content>
   <p id="title">Around the world</p>
   <ion-list>
-    <ion-card  *ngFor="let town of towns" (click)="getForecast(town)">
+    <ion-card class="forecast" *ngFor="let town of towns" (click)="getForecast(town)">
       <ion-row>
         <ion-col>
-          <p>{{town.city}}</p>
-          <p>{{town.condition}}</p>
+          <p id="city">{{town.city}}</p>
+          <p id="condition">{{town.condition}}</p>
         </ion-col>
         <ion-col>
-          <p>{{town.temp}}°</p>
+          <p id="temparature">{{town.temp}}°</p>
         </ion-col>
         <ion-col>
           <ion-icon name="sunny-outline"></ion-icon>
