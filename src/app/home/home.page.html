@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot='start'>
+      <ion-button color='primary'>
+        <ion-icon name='location-outline'></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{location}}</ion-title>
+    <ion-buttons slot='end'>
+      <ion-button color='primary'>
+        <ion-icon name='calendar-outline'></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Current Weather for location -->
+  <div class='currentWeather'>
+    <div class="weather"></div>
+    <p>8 km/h</p>
+    <ion-icon name="water-outline"></ion-icon>
+    <p>32%</p>
+    <div class="condition"></div>
+    
+  </div>
+  <ion-segment (ionChange)="segmentChanged($event)" disabled value="sunny">
+    <ion-segment-button value="sunny">
+      <ion-label>Today, 16 May</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="rainy">
+      <ion-label>Today, 16 May</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</ion-content>
