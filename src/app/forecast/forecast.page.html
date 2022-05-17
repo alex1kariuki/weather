@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" mode='android'>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{cityName}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card class="currentWeather">
+  <ion-icon name="thunderstorm-outline"></ion-icon>
+  <p>15 minutes ago</p>
+  <p>The wind is very strong today! This is not the time to take a yatch trip.</p>
+</ion-card>
+<p id="title">Next week</p>
+<ion-list>
+  <ion-item *ngFor="let day of weather">
+    <ion-row>
+      <ion-col>
+        <p id="day">{{day.day}}</p>
+      </ion-col>
+      <ion-col>
+        <p id="condition">{{day.temp}}°</p>
+      </ion-col>
+      <ion-col>
+        <ion-icon name="sunny-outline"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-item>
+</ion-list>
+</ion-content>

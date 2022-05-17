@@ -1,4 +1,8 @@
-<ion-header>
+<!-- <ion-header translucent="true">
+ 
+</ion-header> -->
+
+<ion-content>
   <ion-toolbar>
     <ion-buttons slot='start'>
       <ion-button color='primary'>
@@ -12,24 +16,51 @@
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
-</ion-header>
-
-<ion-content>
   <!-- Current Weather for location -->
   <div class='currentWeather'>
-    <div class="weather"></div>
-    <p>8 km/h</p>
-    <ion-icon name="water-outline"></ion-icon>
-    <p>32%</p>
-    <div class="condition"></div>
-    
+    <div class="weather">
+      <!-- Icon of the weather -->
+      <ion-icon name="sunny-outline"></ion-icon>
+    </div>
+    <p id="condition">Cloudy</p>
+    <p id="conditionTemp">28°</p>
+    <!-- Speed of the weather -->
+    <!-- <ion-grid >
+      <ion-row>
+        <ion-col>
+          <ion-icon name="water-outline"></ion-icon>
+          <p id="windSpeed">8 km/h</p>
+        </ion-col>
+        <ion-col>
+          <p>32%</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid> -->
+    <!-- <div class="meta">
+      <ion-icon name="water-outline"></ion-icon>
+      <p id="windSpeed">8 km/h</p>
+      <ion-icon name="thermometer-outline"></ion-icon>
+      <p>32%</p>
+    </div>
+    -->
+   
+    <!-- <div class="condition"></div> -->
   </div>
-  <ion-segment (ionChange)="segmentChanged($event)" disabled value="sunny">
-    <ion-segment-button value="sunny">
-      <ion-label>Today, 16 May</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="rainy">
-      <ion-label>Today, 16 May</ion-label>
+  <ion-segment (ionChange)="segmentChanged($event)" scrollable="true" value='1'>
+    <ion-segment-button value="{{date.id}}" *ngFor='let date of nextFive'>
+      <ion-label>{{date.title}}</ion-label>
     </ion-segment-button>
   </ion-segment>
+  <div class="weatherDay">
+    <ion-slides [options]="programOpts">
+      <ion-slide *ngFor="let forecast of weatherForecast">
+        <ion-card>
+          <p id="time">{{forecast.time}}</p>
+          <ion-icon name="sunny-outline"></ion-icon>
+          <p id="temparature">{{forecast.temparature}}°</p>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  
+  </div>
 </ion-content>

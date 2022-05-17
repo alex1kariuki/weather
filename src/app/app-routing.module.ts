@@ -13,6 +13,14 @@ const routes: Routes = [
   {
     path: 'city',
     loadChildren: () => import('./city/city.module').then( m => m.CityPageModule)
+  },
+  {
+    path: 'weather',
+    loadChildren: () => import('./weather/weather.module').then( m => m.WeatherPageModule)
+  },
+  {
+    path: 'forecast',
+    loadChildren: () => import('./forecast/forecast.module').then( m => m.ForecastPageModule)
   }
 ];
 @NgModule({
