@@ -6,7 +6,7 @@ To set up the project, run git clone to a folder on your local.
 
 - Run npm install from the root of the cloned project
 - Run ionic serve to run the project on a browser
-- To run your app on a test device, run ionic cap install android/ ios 
+- To run your app on a test device, run ionic cap install android/ ios
 - You could also run ionic cap build android/ios to build and launch the native platform editor (Android Studio/ Xcode)
 - At this point you could plug your device to your laptop or run on a simulator to test out the app on device.
 
